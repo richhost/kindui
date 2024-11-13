@@ -70,17 +70,14 @@ export default function Subscribe() {
 					)}
 
 					{status === "success" && (
-						<motion.div
-							layoutId="button"
-							className="absolute inset-0 z-10 bg-blue-500 flex items-center justify-center font-semibold"
-						>
+						<div className="absolute inset-0 z-10 bg-blue-500 flex items-center justify-center font-semibold">
 							<motion.span
 								initial={{ y: -6, filter: "blur(4px)" }}
 								animate={{ y: 0, filter: "blur(0px)" }}
 							>
 								Your email has been subscribed!
 							</motion.span>
-						</motion.div>
+						</div>
 					)}
 				</AnimatePresence>
 			</div>
