@@ -10,7 +10,7 @@ export function Navbar() {
       {NAVIGATION_CONFIG.map((nav) => (
         <li
           key={nav.name}
-          className={cn("-mx-2 px-2 hover:bg-muted rounded transition-colors", {
+          className={cn("px-2 hover:bg-muted rounded transition-colors", {
             "bg-muted": pathname === nav.path,
           })}
         >
