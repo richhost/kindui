@@ -25,8 +25,8 @@ export default function Subscribe() {
 		<form onSubmit={onSubmit} className="grow flex justify-center">
 			<div
 				className={cn(
-					"h-12 transition-colors flex items-center gap-2 rounded-full max-w-96 w-full pl-4 bg-neutral-800 text-white relative overflow-hidden",
-					show ? "" : ""
+					"h-12 transition-[outline] outline outline-2 flex items-center gap-2 rounded-full max-w-96 w-full pl-5 bg-neutral-800 text-white relative overflow-hidden",
+					show ? "outline-blue-500" : "outline-neutral-200"
 				)}
 			>
 				<input
