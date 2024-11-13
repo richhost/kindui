@@ -4,5 +4,6 @@ export const PREVIEW_COMPONENTS_MAPPING: Record<
 	string,
 	React.LazyExoticComponent<() => JSX.Element>
 > = {
-	"animated-meeting-button": React.lazy(() => import("~/niceui/animated-meeting-button"))
+	"animated-meeting-button": React.lazy(() => import("~/niceui/animated-meeting-button")),
+	subscribe: React.lazy(() => import("~/niceui/subscribe"))
 };
