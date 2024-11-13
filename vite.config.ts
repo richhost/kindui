@@ -4,6 +4,7 @@ import {
 } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import mdx from "@mdx-js/rollup";
 
 declare module "@remix-run/cloudflare" {
   interface Future {
@@ -13,6 +14,9 @@ declare module "@remix-run/cloudflare" {
 
 export default defineConfig({
   plugins: [
+    mdx({
+      providerImportSource: "@mdx-js/react",
+    }),
     remixCloudflareDevProxy(),
     remix({
       future: {
