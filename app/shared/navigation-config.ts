@@ -6,5 +6,9 @@ export const NAVIGATION_CONFIG = [
   {
     name: "Subscribe",
     path: '/components/subscribe'
+  },
+  {
+    name: "Flip Text",
+    path: '/components/flip-text'
   }
 ];
