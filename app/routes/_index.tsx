@@ -1,16 +1,13 @@
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { MetaFunction } from "react-router";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
+	return [{ title: "New Remix App" }, { name: "description", content: "Welcome to Remix!" }];
 };
 
 export default function Index() {
-  return (
-    <>
-      <div>Nice UI</div>
-    </>
-  );
+	return (
+		<>
+			<div>Nice UI</div>
+		</>
+	);
 }

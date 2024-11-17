@@ -1,5 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
-import { Outlet } from "@remix-run/react";
+import { Outlet } from "react-router";
 import { Navbar } from "~/components/navbar";
 import { ScrollArea } from "~/components/ui/scroll-area";
 import { MDX_COMPONENTS } from "~/shared/mdx-components";
