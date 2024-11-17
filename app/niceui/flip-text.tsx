@@ -2,26 +2,21 @@ import { useMemo, useState, useEffect } from "react";
 import { AnimatePresence, motion, Variants } from "motion/react";
 import useMeasure from "react-use-measure";
 
+interface FlipTextProps {
+	words: string[];
+	duration?: number;
+}
+
 export default function FlipText({
 	words = ["UI UX", "Product", "Motion"],
 	duration = 3000
-}: {
-	words: string[];
-	duration: number;
-}) {
+}: FlipTextProps) {
 	const [index, setIndex] = useState(0);
 
-	let max = useMemo(() => {
-		let value = 0;
-		for (let i = 0; i < words.length; i++) {
-			if (value < words[i].length) {
-				value = words[i].length;
-			}
-		}
-		return value;
-	}, [words]);
+	let max = useMemo(() => Math.max(...words.map((word) => word.length)), [words]);
 
 	const letters = useMemo(() => words[index].split(""), [index]);
+
 	const [ref, { width }] = useMeasure();
 
 	useEffect(() => {
@@ -49,9 +44,9 @@ export default function FlipText({
 							<AnimatePresence key={i} mode="wait" initial={false}>
 								<motion.span
 									key={`${words[index]}-${i}`}
-									initial={{ rotateY: -90 }}
-									animate={{ rotateY: 0 }}
-									exit={{ rotateY: 90 }}
+									initial={{ rotateY: "-0.25turn" }}
+									animate={{ rotateY: "0turn" }}
+									exit={{ rotateY: "0.25turn" }}
 									className="inline-block"
 									transition={{
 										type: "tween",
@@ -71,17 +66,3 @@ export default function FlipText({
 		</div>
 	);
 }
-
-const items: Variants = {
-	initial: {
-		rotateY: -90
-		// opacity: 0
-	},
-	enter: {
-		rotateY: 0
-		// opacity: 1
-	},
-	exit: {
-		rotateY: 90
-	}
-};

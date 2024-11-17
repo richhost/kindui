@@ -10,5 +10,9 @@ export const NAVIGATION_CONFIG = [
   {
     name: "Flip Text",
     path: '/components/flip-text'
+  },
+  {
+    name: 'Flipping Card',
+    path: '/components/flipping-card'
   }
 ];
