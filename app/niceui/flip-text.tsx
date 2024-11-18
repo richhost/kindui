@@ -1,5 +1,7 @@
+"use client";
+
 import { useMemo, useState, useEffect } from "react";
-import { AnimatePresence, motion, Variants } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import useMeasure from "react-use-measure";
 
 interface FlipTextProps {
