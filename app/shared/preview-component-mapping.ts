@@ -7,5 +7,6 @@ export const PREVIEW_COMPONENTS_MAPPING: Record<
 	"animated-meeting-button": React.lazy(() => import("~/niceui/animated-meeting-button")),
 	subscribe: React.lazy(() => import("~/niceui/subscribe")),
 	"flip-text": React.lazy(() => import("~/niceui/flip-text")),
-	"flipping-card-demo": React.lazy(() => import("~/example/flipping-card-demo"))
+	"flipping-card-demo": React.lazy(() => import("~/example/flipping-card-demo")),
+	"sparkles-button": React.lazy(() => import("~/niceui/sparkles-button"))
 };
