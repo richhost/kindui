@@ -9,7 +9,7 @@ export default function PolkaDotMaskDemo() {
 				<Smile size={64} className="relative z-10" />
 
 				<div className="text-6xl font-medium uppercase">smile</div>
-				<PolkaDotMask color="#431407" gapSize={2} dotSize={1} />
+				<PolkaDotMask color="#431407" gapSize={2} dotSize={1} className="pointer-events-none" />
 			</div>
 		</div>
 	);
