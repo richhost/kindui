@@ -18,5 +18,9 @@ export const NAVIGATION_CONFIG = [
 	{
 		name: "Sparkles Button",
 		path: "/components/sparkles-button"
+	},
+	{
+		name: "Polka Dot Mask",
+		path: "/components/polka-dot-mask"
 	}
 ];
