@@ -25,8 +25,8 @@ export default function Subscribe() {
 		<form onSubmit={onSubmit} className="grow flex justify-center">
 			<div
 				className={cn(
-					"h-12 transition-[outline] outline outline-2 flex items-center gap-2 rounded-full max-w-96 w-full pl-5 bg-neutral-800 text-white relative overflow-hidden",
-					show ? "outline-blue-500" : "outline-neutral-200"
+					"h-12 transition-[outline] outline outline-2 flex items-center gap-2 rounded-full max-w-96 w-full pl-5 bg-white relative overflow-hidden",
+					show ? "outline-amber-500" : "outline-amber-400"
 				)}
 			>
 				<input
@@ -52,7 +52,7 @@ export default function Subscribe() {
 						layoutId="button"
 						type="submit"
 						style={{ borderRadius: 999 }}
-						className="px-6 h-10 bg-blue-500 hover:bg-blue-600 font-semibold flex-shrink-0 "
+						className="px-6 h-10 bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 font-semibold flex-shrink-0 transition-colors text-white"
 					>
 						Subscribe
 					</motion.button>
@@ -62,7 +62,7 @@ export default function Subscribe() {
 					{status === "loading" && (
 						<motion.div
 							layoutId="button"
-							className="absolute inset-0 z-10 bg-blue-500 flex items-center justify-center"
+							className="absolute inset-0 z-10 bg-gradient-to-b from-amber-400 to-amber-500 flex items-center justify-center text-white"
 							style={{ borderRadius: 999 }}
 						>
 							<Loader size={18} className="animate-spin" />
@@ -70,10 +70,11 @@ export default function Subscribe() {
 					)}
 
 					{status === "success" && (
-						<div className="absolute inset-0 z-10 bg-blue-500 flex items-center justify-center font-semibold">
+						<div className="absolute inset-0 z-10 bg-gradient-to-b from-amber-400 to-amber-500 flex items-center justify-center font-semibold text-white">
 							<motion.span
 								initial={{ y: -6, filter: "blur(4px)" }}
 								animate={{ y: 0, filter: "blur(0px)" }}
+								transition={{ type: "spring", bounce: 0.3 }}
 							>
 								Your email has been subscribed!
 							</motion.span>
