@@ -6,7 +6,7 @@ interface FlippingCardProps extends React.HTMLAttributes<HTMLDivElement> {
 	duration?: number;
 }
 
-export default function FlippingCard({ className, duration = 8, ...props }: FlippingCardProps) {
+function FlippingCard({ className, duration = 8, ...props }: FlippingCardProps) {
 	return (
 		<div
 			style={{ "--duration": duration } as React.CSSProperties}

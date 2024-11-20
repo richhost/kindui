@@ -1,6 +1,5 @@
 import { Smile } from "lucide-react";
-
-import { PolkaDotMask } from "~/niceui/polka-dot-mask";
+import { PolkaDotMask } from "~/registry/polka-dot-mask";
 
 export default function PolkaDotMaskDemo() {
 	return (

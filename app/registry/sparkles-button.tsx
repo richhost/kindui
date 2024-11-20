@@ -20,7 +20,12 @@ export default function SparklesButton({ sparklesCount = 20 }: { sparklesCount?:
 
 		const sparklesAnimation: AnimationSequence = sparklesArray.map((_, index) => [
 			`.sparkle-${index}`,
-			{ x: random(-100, 100), y: random(-100, 100), scale: random(1, 2.5), opacity: 1 },
+			{
+				x: random(-100, 100),
+				y: random(-100, 100),
+				scale: random(1, 2.5),
+				opacity: 1
+			},
 			{ duration: 0.4, at: "<" }
 		]);
 

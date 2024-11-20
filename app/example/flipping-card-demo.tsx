@@ -1,4 +1,4 @@
-import FlippingCard, { FlippingCardBack, FlippingCardFront } from "~/niceui/flipping-card";
+import { FlippingCard, FlippingCardBack, FlippingCardFront } from "~/registry/flipping-card";
 
 export default function FlippingCardDemo() {
 	return (
