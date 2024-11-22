@@ -12,10 +12,6 @@ export const NAVIGATION_CONFIG = [
 		path: "/components/flip-text"
 	},
 	{
-		name: "Flipping Card",
-		path: "/components/flipping-card"
-	},
-	{
 		name: "Sparkles Button",
 		path: "/components/sparkles-button"
 	},
