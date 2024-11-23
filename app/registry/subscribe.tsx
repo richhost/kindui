@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Loader } from "lucide-react";
 import { cn } from "~/lib/utils";
 
-export default function Subscribe() {
+function Subscribe() {
 	const [email, setEmail] = useState("");
 	const [focus, setFocus] = useState(false);
 	const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
@@ -25,13 +25,13 @@ export default function Subscribe() {
 		<form onSubmit={onSubmit} className="grow flex justify-center">
 			<div
 				className={cn(
-					"h-12 transition-[outline] outline outline-2 flex items-center gap-2 rounded-full max-w-96 w-full pl-5 bg-white relative overflow-hidden",
+					"h-12 transition-[outline] outline-2 flex items-center gap-2 rounded-full max-w-96 w-full pl-5 bg-white relative overflow-hidden",
 					show ? "outline-amber-500" : "outline-amber-400"
 				)}
 			>
 				<input
 					type="email"
-					className="outline-none bg-transparent grow"
+					className="outline-none bg-transparent grow border-none"
 					placeholder="your@email.com"
 					required
 					value={email}
@@ -52,7 +52,7 @@ export default function Subscribe() {
 						layoutId="button"
 						type="submit"
 						style={{ borderRadius: 999 }}
-						className="px-6 h-10 bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 font-semibold flex-shrink-0 transition-colors text-white"
+						className="px-6 h-10 bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 font-semibold flex-shrink-0 transition-colors text-white border-none"
 					>
 						Subscribe
 					</motion.button>
@@ -85,3 +85,5 @@ export default function Subscribe() {
 		</form>
 	);
 }
+
+export { Subscribe };

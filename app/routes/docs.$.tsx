@@ -4,15 +4,17 @@ import { Mdx } from "~/components/mdx-components";
 
 export async function loader({ params }: LoaderFunctionArgs) {
 	const filePath = params["*"];
-	return allDocs.find((item) => item._meta.path.replaceAll("\\", "/") === filePath);
+	const doc = allDocs.find((item) => item._meta.path.replaceAll("\\", "/") === filePath);
+
+	if (!doc) {
+		throw new Response(null, { status: 404, statusText: "Not Found" });
+	}
+
+	return doc;
 }
 
 export default function DocsPage() {
 	const data = useLoaderData<typeof loader>();
-
-	if (!data) {
-		return null;
-	}
 
 	return (
 		<>

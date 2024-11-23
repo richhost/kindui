@@ -32,17 +32,11 @@ export function ComponentPreview({ name, className }: ComponentPreviewProps) {
 				"relative min-h-[350px] border border-neutral-200 rounded-md not-prose flex items-center justify-center",
 				className
 			)}
+			style={{
+				backgroundImage: "radial-gradient(#ccc 0.5px, #ffffff 0.5px)",
+				backgroundSize: "10px 10px"
+			}}
 		>
-			<div
-				className="absolute inset-0 pointer-events-none -z-10"
-				aria-hidden
-				style={{
-					opacity: 0.6,
-					backgroundImage: "radial-gradient(#a2a2a2 0.5px, #ffffff 0.5px)",
-					backgroundSize: "10px 10px"
-				}}
-			></div>
-
 			<Suspense
 				fallback={
 					<div className="absolute inset-0 grid place-items-center">

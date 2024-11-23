@@ -1,22 +1,22 @@
 export const NAVIGATION_CONFIG = [
 	{
 		name: "Animated Meeting Button",
-		path: "/components/animated-meeting-button"
+		path: "/docs/components/animated-meeting-button"
 	},
 	{
 		name: "Subscribe",
-		path: "/components/subscribe"
+		path: "/docs/components/subscribe"
 	},
 	{
 		name: "Flip Text",
-		path: "/components/flip-text"
+		path: "/docs/components/flip-text"
 	},
 	{
 		name: "Sparkles Button",
-		path: "/components/sparkles-button"
+		path: "/docs/components/sparkles-button"
 	},
 	{
 		name: "Polka Dot Mask",
-		path: "/components/polka-dot-mask"
+		path: "/docs/components/polka-dot-mask"
 	}
 ];

@@ -9,10 +9,7 @@ interface FlipTextProps {
 	duration?: number;
 }
 
-export default function FlipText({
-	words = ["UI UX", "Product", "Motion"],
-	duration = 3000
-}: FlipTextProps) {
+export default function FlipText({ words, duration = 3000 }: FlipTextProps) {
 	const [index, setIndex] = useState(0);
 
 	let max = useMemo(() => Math.max(...words.map((word) => word.length)), [words]);

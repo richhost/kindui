@@ -5,5 +5,12 @@
 @layer base {
 	body {
 		@apply antialiased;
+		background-image: url("/site-background-image.svg");
+		background-size: 4px 4px;
+		background-repeat: repeat;
 	}
+}
+
+@theme {
+	--default-font-family: "Geist";
 }

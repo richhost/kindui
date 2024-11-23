@@ -49,14 +49,14 @@ export default function SparklesButton({ sparklesCount = 20 }: { sparklesCount?:
 		<div ref={scope}>
 			<button
 				onClick={onButtonClick}
-				className={cn("relative rounded-full border border-amber-200 bg-amber-100 p-1 group")}
+				className={cn("relative rounded-full border border-amber-200 bg-amber-100 p-1 group z-10")}
 			>
 				<div className="h-10 flex items-center justify-center gap-1 px-5 rounded-full border border-amber-500 bg-gradient-to-b from-amber-400 to-amber-500 shadow-md shadow-amber-400 text-white font-semibold group-hover:border-amber-600 group-hover:shadow-transparent transition">
 					Button
 					<Sparkles size={16} />
 				</div>
 
-				<span className="absolute inset-0 -z-10 block pointer-events-none">
+				<span className="absolute inset-0 block pointer-events-none -z-10">
 					{Array.from({ length: sparklesCount }).map((_, index) => (
 						<svg
 							key={index}
